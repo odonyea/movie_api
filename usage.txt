@@ -1,3 +1,4 @@
+***************************************************************************************
 STEP 1:
 # Register user and get access token for api access 
 # For admin role set JSON ture,  for other user set JSON false
@@ -11,6 +12,12 @@ curl --request POST \
 	"admin_role":true
 }'
 
+# Get version and release info
+curl --request GET \
+  --url https://movie-imdb-api.herokuapp.com/api/ \
+  --header 'authorization: Basic c2FuZGlwZHJ3ZGUwODpzYW5kaXAwOA==' \
+  --header 'content-type: application/json'
+  
 ***************************************************************************************
 STEP 2:
 # Get all movies details (both admin and user can access)
